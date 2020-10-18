@@ -1,0 +1,26 @@
+{
+  "kind": "collectionType",
+  "collectionName": "franchises",
+  "info": {
+    "name": "Franchise",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "anime_items": {
+      "collection": "anime-item",
+      "via": "franchise"
+    },
+    "title": {
+      "model": "title",
+      "via": "franchise"
+    },
+    "Description": {
+      "type": "text"
+    }
+  }
+}

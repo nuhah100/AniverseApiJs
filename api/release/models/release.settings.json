@@ -1,0 +1,33 @@
+{
+  "kind": "collectionType",
+  "collectionName": "releases",
+  "info": {
+    "name": "Release",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "distributor": {
+      "model": "distributor",
+      "via": "releases"
+    },
+    "anime_item": {
+      "model": "anime-item",
+      "via": "releases"
+    },
+    "Description": {
+      "type": "text"
+    },
+    "Url": {
+      "type": "string"
+    },
+    "sub_releases": {
+      "collection": "sub-releases",
+      "via": "release"
+    }
+  }
+}

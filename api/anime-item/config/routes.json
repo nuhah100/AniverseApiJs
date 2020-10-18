@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/anime-items",
+      "handler": "anime-item.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/anime-items/count",
+      "handler": "anime-item.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/anime-items/:id",
+      "handler": "anime-item.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/anime-items",
+      "handler": "anime-item.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/anime-items/:id",
+      "handler": "anime-item.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/anime-items/:id",
+      "handler": "anime-item.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

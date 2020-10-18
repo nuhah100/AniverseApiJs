@@ -1,0 +1,37 @@
+{
+  "name": "aniverse-api",
+  "private": true,
+  "version": "0.1.0",
+  "description": "A Strapi application",
+  "scripts": {
+    "develop": "strapi develop",
+    "start": "strapi start",
+    "build": "strapi build",
+    "strapi": "strapi"
+  },
+  "devDependencies": {},
+  "dependencies": {
+    "strapi": "3.2.4",
+    "strapi-admin": "3.2.4",
+    "strapi-utils": "3.2.4",
+    "strapi-plugin-content-type-builder": "3.2.4",
+    "strapi-plugin-content-manager": "3.2.4",
+    "strapi-plugin-users-permissions": "3.2.4",
+    "strapi-plugin-email": "3.2.4",
+    "strapi-plugin-upload": "3.2.4",
+    "strapi-connector-bookshelf": "3.2.4",
+    "knex": "<0.20.0",
+    "sqlite3": "latest"
+  },
+  "author": {
+    "name": "A Strapi developer"
+  },
+  "strapi": {
+    "uuid": "b9907d8d-9ead-4aa7-adc2-d09b2eeac567"
+  },
+  "engines": {
+    "node": ">=10.0.0",
+    "npm": ">=6.0.0"
+  },
+  "license": "MIT"
+}

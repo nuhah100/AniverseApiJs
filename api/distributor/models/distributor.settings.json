@@ -1,0 +1,48 @@
+{
+  "kind": "collectionType",
+  "collectionName": "distributors",
+  "info": {
+    "name": "Distributor"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "title": {
+      "model": "title",
+      "via": "distributor"
+    },
+    "Kind": {
+      "type": "enumeration",
+      "enum": [
+        "official",
+        "fansub"
+      ]
+    },
+    "Logo": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "Description": {
+      "type": "text"
+    },
+    "anime_items": {
+      "collection": "anime-item",
+      "via": "distributors",
+      "dominant": true
+    },
+    "releases": {
+      "via": "distributor",
+      "collection": "release"
+    }
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/franchises",
+      "handler": "franchise.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/franchises/count",
+      "handler": "franchise.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/franchises/:id",
+      "handler": "franchise.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/franchises",
+      "handler": "franchise.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/franchises/:id",
+      "handler": "franchise.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/franchises/:id",
+      "handler": "franchise.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

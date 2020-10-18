@@ -1,0 +1,51 @@
+{
+  "kind": "collectionType",
+  "collectionName": "sub_releases",
+  "info": {
+    "name": "SubReleases"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "Url": {
+      "type": "string"
+    },
+    "Kind": {
+      "type": "enumeration",
+      "enum": [
+        "episode",
+        "ova",
+        "movie"
+      ]
+    },
+    "EpisodeNumber": {
+      "type": "integer",
+      "min": 0
+    },
+    "Version": {
+      "type": "decimal",
+      "min": 1,
+      "default": 1
+    },
+    "ReleaseDate": {
+      "type": "date"
+    },
+    "SubtitleKind": {
+      "type": "enumeration",
+      "enum": [
+        "hard",
+        "soft"
+      ]
+    },
+    "ReleaseNotes": {
+      "type": "text"
+    },
+    "release": {
+      "via": "sub_releases",
+      "model": "release"
+    }
+  }
+}

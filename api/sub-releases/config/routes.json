@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/sub-releases",
+      "handler": "sub-releases.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/sub-releases/count",
+      "handler": "sub-releases.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/sub-releases/:id",
+      "handler": "sub-releases.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/sub-releases",
+      "handler": "sub-releases.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/sub-releases/:id",
+      "handler": "sub-releases.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/sub-releases/:id",
+      "handler": "sub-releases.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

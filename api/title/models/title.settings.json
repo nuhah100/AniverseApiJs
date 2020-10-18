@@ -1,0 +1,41 @@
+{
+  "kind": "collectionType",
+  "collectionName": "titles",
+  "info": {
+    "name": "Title"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "RomajiTitle": {
+      "type": "string"
+    },
+    "JapaneseTitle": {
+      "type": "string"
+    },
+    "EnglishTitle": {
+      "type": "string"
+    },
+    "HebrewTitle": {
+      "type": "string"
+    },
+    "IsHebrewFantitle": {
+      "type": "boolean"
+    },
+    "anime_item": {
+      "via": "title",
+      "model": "anime-item"
+    },
+    "franchise": {
+      "via": "title",
+      "model": "franchise"
+    },
+    "distributor": {
+      "via": "title",
+      "model": "distributor"
+    }
+  }
+}

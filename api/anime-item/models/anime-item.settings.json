@@ -1,0 +1,63 @@
+{
+  "kind": "collectionType",
+  "collectionName": "anime_items",
+  "info": {
+    "name": "AnimeItem",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "Description": {
+      "type": "text"
+    },
+    "Kind": {
+      "type": "enumeration",
+      "enum": [
+        "anime",
+        "ova",
+        "movie"
+      ]
+    },
+    "Episodes": {
+      "type": "integer",
+      "min": 0
+    },
+    "AgeRating": {
+      "type": "integer",
+      "min": 0,
+      "max": 18
+    },
+    "OtherSites": {
+      "type": "json"
+    },
+    "Image": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "title": {
+      "model": "title",
+      "via": "anime_item"
+    },
+    "franchise": {
+      "via": "anime_items",
+      "model": "franchise"
+    },
+    "distributors": {
+      "via": "anime_items",
+      "collection": "distributor"
+    },
+    "releases": {
+      "via": "anime_item",
+      "collection": "release"
+    }
+  }
+}
