@@ -3,7 +3,7 @@
     {
       "method": "GET",
       "path": "/sub-releases",
-      "handler": "sub-releases.find",
+      "handler": "sub-release.find",
       "config": {
         "policies": []
       }
@@ -11,7 +11,7 @@
     {
       "method": "GET",
       "path": "/sub-releases/count",
-      "handler": "sub-releases.count",
+      "handler": "sub-release.count",
       "config": {
         "policies": []
       }
@@ -19,7 +19,7 @@
     {
       "method": "GET",
       "path": "/sub-releases/:id",
-      "handler": "sub-releases.findOne",
+      "handler": "sub-release.findOne",
       "config": {
         "policies": []
       }
@@ -27,7 +27,7 @@
     {
       "method": "POST",
       "path": "/sub-releases",
-      "handler": "sub-releases.create",
+      "handler": "sub-release.create",
       "config": {
         "policies": []
       }
@@ -35,7 +35,7 @@
     {
       "method": "PUT",
       "path": "/sub-releases/:id",
-      "handler": "sub-releases.update",
+      "handler": "sub-release.update",
       "config": {
         "policies": []
       }
@@ -43,7 +43,7 @@
     {
       "method": "DELETE",
       "path": "/sub-releases/:id",
-      "handler": "sub-releases.delete",
+      "handler": "sub-release.delete",
       "config": {
         "policies": []
       }

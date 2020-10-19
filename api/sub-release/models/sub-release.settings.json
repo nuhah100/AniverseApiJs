@@ -2,7 +2,7 @@
   "kind": "collectionType",
   "collectionName": "sub_releases",
   "info": {
-    "name": "SubReleases"
+    "name": "SubRelease"
   },
   "options": {
     "increments": true,
@@ -23,21 +23,19 @@
     },
     "EpisodeNumber": {
       "type": "integer",
-      "min": 0
+      "min": 0,
+      "default": 1
     },
     "Version": {
       "type": "decimal",
-      "min": 1,
+      "min": 0,
       "default": 1
     },
-    "ReleaseDate": {
-      "type": "date"
-    },
-    "SubtitleKind": {
+    "Subtitles": {
       "type": "enumeration",
       "enum": [
-        "hard",
-        "soft"
+        "soft",
+        "hard"
       ]
     },
     "ReleaseNotes": {
