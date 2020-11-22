@@ -16,11 +16,13 @@
       "via": "franchise"
     },
     "title": {
-      "model": "title",
-      "via": "franchise"
+      "via": "franchise",
+      "model": "title"
     },
     "Description": {
-      "type": "text"
+      "type": "text",
+      "minLength": 2,
+      "maxLength": 600
     }
   }
 }

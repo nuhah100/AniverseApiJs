@@ -12,7 +12,9 @@
   },
   "attributes": {
     "Description": {
-      "type": "text"
+      "type": "text",
+      "required": true,
+      "minLength": 2
     },
     "Kind": {
       "type": "enumeration",
@@ -20,11 +22,14 @@
         "anime",
         "ova",
         "movie"
-      ]
+      ],
+      "required": true,
+      "default": "anime"
     },
     "Episodes": {
       "type": "integer",
-      "min": 0
+      "min": 0,
+      "required": false
     },
     "AgeRating": {
       "type": "integer",
@@ -34,18 +39,9 @@
     "OtherSites": {
       "type": "json"
     },
-    "Image": {
-      "model": "file",
-      "via": "related",
-      "allowedTypes": [
-        "images"
-      ],
-      "plugin": "upload",
-      "required": false
-    },
     "title": {
-      "model": "title",
-      "via": "anime_item"
+      "via": "anime_item",
+      "model": "title"
     },
     "franchise": {
       "via": "anime_items",
@@ -56,8 +52,8 @@
       "collection": "distributor"
     },
     "releases": {
-      "via": "anime_item",
-      "collection": "release"
+      "collection": "release",
+      "via": "anime_item"
     }
   }
 }

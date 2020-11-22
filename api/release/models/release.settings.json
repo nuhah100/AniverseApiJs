@@ -12,12 +12,12 @@
   },
   "attributes": {
     "distributor": {
-      "model": "distributor",
-      "via": "releases"
+      "via": "releases",
+      "model": "distributor"
     },
     "anime_item": {
-      "model": "anime-item",
-      "via": "releases"
+      "via": "releases",
+      "model": "anime-item"
     },
     "Description": {
       "type": "text"
